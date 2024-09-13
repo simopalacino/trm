@@ -1,0 +1,117 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "CMake: build",
+			"command": "build",
+			"targets": [
+				"all"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"detail": "CMake template build task"
+		},
+		{
+			"label": "Conan Install",
+			"type": "shell",
+			"command": "conan install . --build=missing",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "CMake Build",
+			"type": "shell",
+			"command": "cmake --build build",
+			"dependsOn": "Conan Install",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 1",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/01_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 2",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/02_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 3",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/03_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 4",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/04_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 5",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/05_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 6",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/06_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 7",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/07_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Example 3",
+			"type": "shell",
+			"command": "./build/build/Debug/examples/03_example",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}

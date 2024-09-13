@@ -1,0 +1,6 @@
+[requires]
+trm/0.1.0
+
+[generators]
+CMakeToolchain
+CMakeDeps
