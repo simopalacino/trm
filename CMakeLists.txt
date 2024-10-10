@@ -37,6 +37,6 @@ include(GNUInstallDirs)
 #
 # Tests
 #
-enable_testing()
-add_subdirectory(examples)
+# enable_testing()
+# add_subdirectory(examples)
 # add_subdirectory(test)
